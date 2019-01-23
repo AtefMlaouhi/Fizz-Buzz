@@ -56,7 +56,7 @@ describe('FizzBuzzService', () => {
       .unsubscribe();
   });
 
-  it('getFizzBuzzFromNumber(25) should return `Buzz`]', () => {
+  it('getFizzBuzzFromNumber(25) should return `Buzz`', () => {
     const service: FizzBuzzService = TestBed.get(FizzBuzzService);
     service
       .getFizzBuzzFromNumber('25')

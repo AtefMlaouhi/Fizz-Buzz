@@ -31,6 +31,10 @@ export class FizzBuzzService {
       retValue.push(this.Fizz.toUpperCase());
     }
 
+    if (value.includes(this.five)) {
+      retValue.push(this.Buzz);
+    }
+
     return of<string[]>(retValue);
   }
 }
