@@ -1,4 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/AtefMlaouhi/Fizz-Buzz.svg?branch=master)](https://travis-ci.org/AtefMlaouhi/Fizz-Buzz)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5517977825cbf18f0622/maintainability)](https://codeclimate.com/github/AtefMlaouhi/Fizz-Buzz/maintainability)
+[![BCH compliance](https://bettercodehub.com/edge/badge/AtefMlaouhi/Fizz-Buzz?branch=master)](https://bettercodehub.com/)
 
 # FizzBuzz-Kata
 
