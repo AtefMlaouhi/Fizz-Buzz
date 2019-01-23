@@ -14,23 +14,23 @@ export class FizzBuzzService {
   constructor() {}
 
   getFizzBuzzFromNumber(value: string): Observable<string[]> {
+    if (value === null || value.length === 0) {
+      return of<string[]>([this.Oops]);
+    }
+
+    if (+value === 0) {
+      return of<string[]>([this.Oops]);
+    }
+
     const retValue = new Array<string>();
-    if (+value > 0) {
-      if (value.includes(this.three)) {
-        retValue.push(this.Fizz);
-      }
-
-      if (+value % +this.three === 0) {
-        retValue.push(this.Fizz.toUpperCase());
-      }
+    if (value.includes(this.three)) {
+      retValue.push(this.Fizz);
     }
 
-    if (
-      (!value.includes(this.three) || !value.includes(this.five)) &&
-      retValue.length === 0
-    ) {
-      retValue.push(this.Oops);
+    if (+value % +this.three === 0) {
+      retValue.push(this.Fizz.toUpperCase());
     }
+
     return of<string[]>(retValue);
   }
 }
