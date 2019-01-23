@@ -114,4 +114,18 @@ describe('FizzBuzzService', () => {
       .unsubscribe();
   });
 
+  it('getFizzBuzzFromNumber(375) should return [`Fizz`, `FIZZ`, `Buzz`, `BUZZ`]', () => {
+    const service: FizzBuzzService = TestBed.get(FizzBuzzService);
+    service
+      .getFizzBuzzFromNumber('375')
+      .subscribe((result: string[]) => {
+        expect(result.length).toEqual(4);
+        expect(result[0]).toEqual('Fizz');
+        expect(result[1]).toEqual('FIZZ');
+        expect(result[2]).toEqual('Buzz');
+        expect(result[3]).toEqual('BUZZ');
+      })
+      .unsubscribe();
+  });
+
 });
