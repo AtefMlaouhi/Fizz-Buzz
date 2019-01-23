@@ -22,23 +22,30 @@ export class FizzBuzzService {
       return of<string[]>([this.Oops]);
     }
 
+    return of<string[]>(this.validateRules(value));
+  }
+
+  private validateRules(value: string): string[] {
     const retValue = new Array<string>();
-    if (value.includes(this.three)) {
-      retValue.push(this.Fizz);
+    retValue.push(...this.validateCondition(value, this.three, this.Fizz));
+    retValue.push(...this.validateCondition(value, this.five, this.Buzz));
+
+    return retValue;
+  }
+
+  private validateCondition(
+    value: string,
+    condition: string,
+    result: string
+  ): string[] {
+    const retValue = new Array<string>();
+    if (value.includes(condition)) {
+      retValue.push(result);
     }
 
-    if (+value % +this.three === 0) {
-      retValue.push(this.Fizz.toUpperCase());
+    if (+value % +condition === 0) {
+      retValue.push(result.toUpperCase());
     }
-
-    if (value.includes(this.five)) {
-      retValue.push(this.Buzz);
-    }
-
-    if (+value % +this.five === 0) {
-      retValue.push(this.Buzz.toUpperCase());
-    }
-
-    return of<string[]>(retValue);
+    return retValue;
   }
 }
