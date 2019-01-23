@@ -138,4 +138,15 @@ describe('FizzBuzzService', () => {
       })
       .unsubscribe();
   });
+
+  it('getFizzBuzzFromNumber(null) should return `oops`', () => {
+    const service: FizzBuzzService = TestBed.get(FizzBuzzService);
+    service
+      .getFizzBuzzFromNumber(null)
+      .subscribe((result: string[]) => {
+        expect(result.length).toEqual(1);
+        expect(result[0]).toEqual('oops');
+      })
+      .unsubscribe();
+  });
 });
