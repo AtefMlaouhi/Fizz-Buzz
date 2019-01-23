@@ -30,7 +30,7 @@ export class FizzBuzzService {
     retValue.push(...this.validateCondition(value, this.three, this.Fizz));
     retValue.push(...this.validateCondition(value, this.five, this.Buzz));
 
-    return retValue;
+    return retValue.length === 0 ? [this.Oops] : retValue;
   }
 
   private validateCondition(
