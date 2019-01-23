@@ -89,4 +89,16 @@ describe('FizzBuzzService', () => {
       })
       .unsubscribe();
   });
+
+  it('getFizzBuzzFromNumber(53) should return [`Fizz`,`Buzz`]', () => {
+    const service: FizzBuzzService = TestBed.get(FizzBuzzService);
+    service
+      .getFizzBuzzFromNumber('53')
+      .subscribe((result: string[]) => {
+        expect(result.length).toEqual(2);
+        expect(result[0]).toEqual('Fizz');
+        expect(result[1]).toEqual('Buzz');
+      })
+      .unsubscribe();
+  });
 });
