@@ -149,4 +149,15 @@ describe('FizzBuzzService', () => {
       })
       .unsubscribe();
   });
+
+  it('getFizzBuzzFromNumber(``) should return `oops`', () => {
+    const service: FizzBuzzService = TestBed.get(FizzBuzzService);
+    service
+      .getFizzBuzzFromNumber('')
+      .subscribe((result: string[]) => {
+        expect(result.length).toEqual(1);
+        expect(result[0]).toEqual('oops');
+      })
+      .unsubscribe();
+  });
 });
