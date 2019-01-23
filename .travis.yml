@@ -21,7 +21,7 @@ install:
 
 script:
   - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
-  - ng build --prod --base-href "https://atefmlaouhi.github.io/Fizz-Buzz"
+  - ng build --prod --base-href "https://atefmlaouhi.github.io/Fizz-Buzz/"
 
 deploy:
   provider: pages
