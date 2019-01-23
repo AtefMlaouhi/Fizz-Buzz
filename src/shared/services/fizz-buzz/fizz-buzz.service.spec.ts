@@ -128,4 +128,11 @@ describe('FizzBuzzService', () => {
       .unsubscribe();
   });
 
+  it('getFizzBuzzFromNumber(6749) should return `oops`', () => {
+    const service: FizzBuzzService = TestBed.get(FizzBuzzService);
+    service.getFizzBuzzFromNumber('6749').subscribe((result: string[]) => {
+      expect(result.length).toEqual(1);
+      expect(result[0]).toEqual('oops');
+    });
+  });
 });
