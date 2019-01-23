@@ -61,7 +61,7 @@ describe('FizzBuzzService', () => {
     service
       .getFizzBuzzFromNumber('25')
       .subscribe((result: string[]) => {
-        expect(result.length).toEqual(1);
+        expect(result.length).toEqual(2);
         expect(result[0]).toEqual('Buzz');
       })
       .unsubscribe();
