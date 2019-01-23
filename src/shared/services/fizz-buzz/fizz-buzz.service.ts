@@ -15,10 +15,14 @@ export class FizzBuzzService {
 
   getFizzBuzzFromNumber(value: string): Observable<string[]> {
     const retValue = new Array<string>();
-    if (!value.includes(this.three) || !value.includes(this.five)) {
+    if (!value.includes(this.three) && !value.includes(this.five)) {
       retValue.push(this.Oops);
     }
 
+    if (value.includes(this.three)) {
+      retValue.push(this.Fizz);
+    }
+    console.log(retValue);
     return of<string[]>(retValue);
   }
 }
