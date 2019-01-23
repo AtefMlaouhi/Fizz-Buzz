@@ -32,4 +32,15 @@ describe('FizzBuzzService', () => {
       })
       .unsubscribe();
   });
+
+  it('getFizzBuzzFromNumber(12) should return `Fizz`', () => {
+    const service: FizzBuzzService = TestBed.get(FizzBuzzService);
+    service
+      .getFizzBuzzFromNumber('12')
+      .subscribe((result: string[]) => {
+        expect(result.length).toEqual(1);
+        expect(result[0]).toEqual('FIZZ');
+      })
+      .unsubscribe();
+  });
 });
