@@ -1,0 +1,17 @@
+@import "../../styles/colors";
+
+:host(app-header) {
+  mat-toolbar {
+    background-color: $blue;
+    position: fixed;
+    z-index: 999;
+
+    .header-icon {
+      padding: 0 14px;
+    }
+
+    .header-spacer {
+      flex: 1 1 auto;
+    }
+  }
+}

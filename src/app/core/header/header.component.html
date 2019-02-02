@@ -1,0 +1,10 @@
+<mat-toolbar class="mat-elevation-z6 example-toolbar" color="primary">
+  <button mat-icon-button [routerLink]="['/']">
+    <mat-icon>home</mat-icon>
+  </button>
+  <h1 class="class.is-open">{{appConfig.shortTitle}}</h1>
+  <span class="header-spacer"></span>
+  <a class="icon__image" mat-icon-button="" href="{{appConfig.repositoryURL}}" target="_blank">
+    <img src="assets/images/github-circle-white-transparent.svg" />
+  </a>
+</mat-toolbar>

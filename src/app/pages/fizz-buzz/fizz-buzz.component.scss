@@ -1,0 +1,23 @@
+:host() {
+  .fizz-buzz-ripple {
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+    margin: 10px;
+    border-radius: 15px;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+    align-items: center;
+  }
+}

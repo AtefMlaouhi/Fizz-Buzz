@@ -1,0 +1,6 @@
+<div fxLayout="row" fxLayout.md="column" fxLayout.sm="column" fxLayout.xs="column">
+  <div *ngFor="let section of appConfig.sections" class="fizz-buzz-ripple mat-elevation-z4" [style.background]="section.backGroundColor"
+    [routerLink]="[section.link]" matRipple>
+    {{ section.label }}
+  </div>
+</div>

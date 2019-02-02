@@ -1,18 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FizzBuzzService } from 'src/app/shared';
+import { ApplicationCoreModule } from './core/application-core.module';
+import { PageModule } from './pages/page.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, RouterModule, AppRoutingModule, ApplicationCoreModule, PageModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  static forRoot(config: FizzBuzzService): ModuleWithProviders {
+    return {
+      ngModule: AppModule,
+      providers: [{ provide: FizzBuzzService, useValue: config }]
+    };
+  }
+}
