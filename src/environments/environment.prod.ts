@@ -1,5 +1,5 @@
 export const environment = {
-  repositoryURL: 'https://github.com/AtefMlaouhi/Kata-FizzBuzz.git',
+  repositoryURL: 'https://github.com/AtefMlaouhi/Fizz-Buzz',
   shortTitle: 'Kata FizzBuzz',
   sections: [
     { label: 'Presentation', backGroundColor: '#2196F3', link: 'presentation' },

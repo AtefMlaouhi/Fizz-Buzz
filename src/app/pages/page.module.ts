@@ -7,6 +7,7 @@ import { AngularMaterialModule } from '../shared';
 import { FizzBuzzComponent } from './fizz-buzz/fizz-buzz.component';
 import { DiscoverComponent } from './discover/discover.component';
 import { PlayComponent } from './play/play.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { PlayComponent } from './play/play.component';
     DiscoverComponent,
     PlayComponent
   ],
-  imports: [CommonModule, RouterModule, AngularMaterialModule],
+  imports: [CommonModule, RouterModule, SharedModule],
   exports: [
     FizzBuzzComponent,
     PresentationComponent,

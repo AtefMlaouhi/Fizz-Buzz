@@ -11,7 +11,7 @@ export class FizzBuzzService {
 
   constructor() {}
 
-  getFizzBuzzFromNumber(value: string): Observable<string[]> {
+  public getFizzBuzzFromNumber(value: string): Observable<string[]> {
     if (value === null || value.length === 0) {
       return of<string[]>([this.Oops]);
     }

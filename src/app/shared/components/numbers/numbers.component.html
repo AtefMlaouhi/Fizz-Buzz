@@ -1,0 +1,5 @@
+<mat-grid-list fxLayoutAlign="center center" cols="5" rowHeight="60px">
+  <mat-grid-tile *ngFor="let tile of numbers.split('')" [colspan]="1" [rowspan]="1" fxLayoutAlign="center center">
+    <button mat-mini-fab color="primary">{{tile}}</button>
+  </mat-grid-tile>
+</mat-grid-list>

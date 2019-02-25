@@ -1,9 +1,8 @@
 :host(app-home) {
-  overflow: hidden;
-  height: -webkit-fill-available;
-
-  div {
-    height: -webkit-fill-available !important;
-    background-color: #B0BEC5;
-  }
+    overflow: hidden;
+    height: -webkit-fill-available;
+    div {
+        height: -webkit-fill-available !important;
+        background-color: #B0BEC5;
+    }
 }

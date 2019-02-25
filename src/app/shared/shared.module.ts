@@ -4,10 +4,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AngularMaterialModule } from './modules';
+import { AnalyseNumberComponent } from './components/analyse-number/analyse-number.component';
+import { FizzBuzzService } from './services';
+import { NumbersComponent } from './components/numbers/numbers.component';
 
 @NgModule({
   imports: [
     FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule,
+    CommonModule,
     ReactiveFormsModule.withConfig({ warnOnNgModelWithFormControl: 'never' }),
     HttpClientModule,
     RouterModule,
@@ -19,6 +26,8 @@ import { AngularMaterialModule } from './modules';
     // pipe
     // dialog
     // component
+    AnalyseNumberComponent,
+    NumbersComponent
   ],
   exports: [
     CommonModule,
@@ -28,11 +37,14 @@ import { AngularMaterialModule } from './modules';
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
-    AngularMaterialModule
+    AngularMaterialModule,
     // directive
     // pipe
     // component
+    AnalyseNumberComponent,
+    NumbersComponent
   ],
-  entryComponents: []
+  entryComponents: [],
+  providers: [FizzBuzzService]
 })
 export class SharedModule {}

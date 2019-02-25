@@ -15,10 +15,4 @@ import { PageModule } from './pages/page.module';
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  static forRoot(config: FizzBuzzService): ModuleWithProviders {
-    return {
-      ngModule: AppModule,
-      providers: [{ provide: FizzBuzzService, useValue: config }]
-    };
-  }
 }

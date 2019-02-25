@@ -13,7 +13,7 @@ import { AngularMaterialModule } from '../shared';
     MainComponent,
     HomeComponent
   ],
-  imports: [CommonModule, AngularMaterialModule, CoreRoutingModule],
+  imports: [CommonModule, AngularMaterialModule, CoreRoutingModule, CoreRoutingModule],
   exports: [
     CommonModule,
     FormsModule,

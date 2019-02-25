@@ -1,0 +1,5 @@
+<mat-grid-list fxLayoutAlign="center center" cols="5" rowHeight="60px">
+  <mat-grid-tile *ngFor="let item of resultValue" [colspan]="1" [rowspan]="1" fxLayoutAlign="center center">
+    <button mat-flat-button [ngClass]="{'single': item.includes('.'), 'multi': !item.includes('.') }">{{item.replace('.','')}}</button>
+  </mat-grid-tile>
+</mat-grid-list>
